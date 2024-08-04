@@ -1,0 +1,36 @@
+/* styles/ColorPicker.css */
+.color-picker {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+  }
+  
+  .color-wheel-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .color-wheel {
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .color-indicator {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+  }
+  
+  .color-text {
+    width: 100px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  

@@ -1,0 +1,57 @@
+@import './Animation.css'; 
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sidebar-option{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+}
+.selected-option{
+    background-color: #40331b;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    transition: box-shadow 0.3s ease-in-out;
+    color: white;
+    height: fit-content;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+}
+.sidebar-icon{
+  padding: 0 6px 0 6px;
+  display: flex;
+}
+.sidebar-title{
+    padding: 0 6px 0 6px;
+}
+.menu-icon{
+  padding: 10px;
+}
+.menu-drawer-option{
+  display: flex;
+  align-items: center;
+  gap:20px;
+}
+@media(min-width:576px){
+  .menu{
+    display: none;
+  }
+  .menu-icon{
+    display: none;
+  }
+}
+@media(max-width:576px){
+  .sidebar{
+    display: none;
+  }
+}
+.menu-closed{
+  display: none;
+}
+.menu-open{
+  display: block;
+}

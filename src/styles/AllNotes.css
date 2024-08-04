@@ -1,0 +1,133 @@
+@import './Animation.css'; 
+.notes-container {
+    padding: 16px;
+    width: 100%;
+  }
+  
+  .notes-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  .add-note-title-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: white;
+  }
+
+  .add-note-container{
+    width: 45%;
+    border: 2px solid #46484b;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    height: fit-content;
+    color: white;
+  }
+  .note-title{
+    width: 85%;
+    border: none;
+    background-color: transparent;
+  }
+  .note-title :focus{
+    border: none;
+  }
+  .note-title-suboptions{
+    padding-left: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  .note-add-button,.note-close-button{
+    background-color: transparent;
+    border: none;
+    color: white;
+    margin: 0 5px 0 5px;
+    padding: 5px;
+    cursor: pointer;
+  }
+  .note-options{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .note-options-left{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+  }
+  .note-options-right{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .note-content{
+    width: 95%;
+    border: none;
+    padding: 10px;
+    margin:10px 0 10px 0;
+    background-color: transparent;
+  }
+  .note-content-container{
+    transition: box-shadow 0.3s ease-in-out;
+    color: white;
+    height: fit-content;
+    opacity: 0; /* Start hidden */
+    animation: fadeInUp 0.5s ease forwards; /* Apply animation */
+  }
+  .notes-container-empty{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 70vh;
+  }
+  .notes-empty-icon{
+    color:#40331b;
+    font-size: 50px;
+  }
+  .notes-container-empty h2{
+    font-weight: 400;
+    color:#46484b;
+  }
+  .pinned-notes{
+    margin-bottom: 30px;
+  }
+  .pinned-notes-heading, .others-heading, .archived-notes-heading{
+    margin: 10px 0 10px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  @media (max-width: 1200px) {
+    .notes-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .notes-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .add-note-container{
+      width: 60%;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .notes-grid {
+      grid-template-columns: 1fr;
+    }
+    .add-note-container{
+      width: 85%;
+    }
+    .note-options-right{
+      width: 50%;
+      justify-content: center;
+    }
+    .notes-container{
+      width: 85%;
+    }
+  }
